@@ -1,63 +1,47 @@
 # Glioma Genomic Analysis — Mutation-Based Grade Prediction
-Population-based analysis of glioma mutations utilizing publicly available datasets (TCGA)
-🚀 QUICK VIEW: You can explore the full Exploratory Data Analysis (EDA) and the detailed variable dictionary here: 📊 analysis_notebook.ipynb
 
-📖 About the Project
-This project focuses on the molecular and clinical characterization of gliomas, a type of brain tumor. Using data from the The Cancer Genome Atlas (TCGA), we analyze how genetic mutations and clinical factors like age and gender correlate with the tumor grade.
+> **🚀 QUICK VIEW:** You can explore the core Exploratory Data Analysis (EDA) and the statistical logic here: [**📊 analysis_notebook.ipynb**](./analysis_notebook.ipynb)
 
-The primary goal is to distinguish between LGG (Lower-Grade Glioma) and GBM (Glioblastoma Multiforme) based on a patient's mutational signature. This is a critical task in precision medicine, as it helps determine the most effective treatment path. 🧬
+---
 
-📑 Data Dictionary
-To ensure transparency and reproducibility, we have defined a structured dictionary for the variables used in this study:
+## 📖 About the Project
 
-Clinical Features
-Grade (Target): Clinical classification of the glioma.
+**GliomaVision** is a data-driven project designed to characterize brain tumors using genomic and clinical data from the **TCGA (The Cancer Genome Atlas)**.
 
-0: LGG (Lower-Grade Glioma).
+The project bridges the gap between raw mutational data and clinical diagnosis. By analyzing the relationship between **20 specific gene mutations** and patient demographics, we aim to identify the molecular signatures that distinguish Low-Grade Gliomas (LGG) from Glioblastomas (GBM).
 
-1: GBM (Glioblastoma Multiforme).
+---
 
-Gender: Biological sex (0: Male, 1: Female).
+## 🧬 Data Structure & Features
 
-Age_at_diagnosis: Patient's age at the time of initial diagnosis (in decimal years). 📅
+The dataset integrates clinical metadata with binary mutational status for key oncogenes.
 
-Race: Reported ethnic group (Numerically encoded).
+* **Clinical Profile:** Includes `Age_at_diagnosis`, `Gender`, and `Race`.
+* **Genomic Profile:** Binary indicators (0: Wildtype, 1: Mutated) for 20 genes such as `IDH1`, `TP53`, `PTEN`, and `EGFR`.
+* **Target Variable:** `Grade` (0 for LGG, 1 for GBM).
 
-Mutational Status (Molecular Signatures)
-For the 20 genes analyzed (including IDH1, TP53, ATRX, PTEN, and EGFR), the encoding is:
+---
 
-0: Wildtype (No mutation detected).
+## 📈 Exploratory Data Analysis (EDA)
 
-1: Mutated (Presence of genetic alteration). 🧬
+The analysis is divided into two main stages to uncover patterns within the population.
 
-📊 Exploratory Data Analysis (EDA)
-The project includes a comprehensive two-stage analysis to understand the underlying patterns of the dataset.
+### 1. Univariate Analysis
+* **Demographics:** Examination of age distribution and gender balance within the study.
+* **Mutation Frequency:** A ranking of the most prevalent genetic alterations across all patients.
 
-1. Univariate Analysis
-We analyzed each variable in isolation to understand the population's baseline:
+### 2. Bivariate Analysis
+* **Age vs. Grade:** Validation of the clinical hypothesis that higher-grade tumors (GBM) correlate with advanced age.
+* **Mutational Signatures:** Identifying "diagnostic markers" by comparing mutation rates between LGG and GBM.
 
-Class Balance: Checking the distribution of LGG vs. GBM cases. ⚖️
+---
 
-Demographics: Visualizing the age distribution (histogram) and gender/race frequencies.
+## 🛠️ Technologies Used
 
-Mutation Ranking: Identifying which genes are most frequently mutated across the entire dataset.
+* **Language:** Python 3.12+
+* **Data Science:** Pandas, NumPy.
+* **Visualization:** Matplotlib, Seaborn.
+* **Environment:** VS Code, Jupyter Notebook.
 
-2. Bivariate Analysis
-We investigated the relationships between clinical factors and the tumor grade:
-
-Age vs. Grade: Utilizing boxplots to confirm the clinical hypothesis that GBM patients tend to be significantly older at diagnosis. 📈
-
-Genomic Signatures: Comparing mutation rates of specific genes (like IDH1) across different grades to find diagnostic markers.
-
-🛠️ Technologies Used
-Language: Python 3.12+
-
-Data Manipulation: Pandas, NumPy.
-
-Visualization: Matplotlib, Seaborn.
-
-Environment: VS Code, Jupyter Notebooks.
-
-Version Control: Git & GitHub.
-
-Project developed as part of the Master's Degree in AI & Big Data by Alejandro Benítez.
+---
+*Project developed as part of the Master's Degree in AI & Big Data by Alejandro Benítez.*
