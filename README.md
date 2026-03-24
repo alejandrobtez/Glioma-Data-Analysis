@@ -6,42 +6,46 @@
 
 ## 📖 About the Project
 
-**GliomaVision** is a data-driven project designed to characterize brain tumors using genomic and clinical data from the **TCGA (The Cancer Genome Atlas)**.
+**Gliomas** are the most common brain tumors and are classified into two groups based on their aggressiveness: **LGG** (Lower-Grade Glioma) and **GBM** (Glioblastoma Multiforme). Traditionally, grading is performed through histological criteria and imaging, but molecular and mutational factors are now crucial for an accurate diagnosis.
 
-The project bridges the gap between raw mutational data and clinical diagnosis. By analyzing the relationship between **20 specific gene mutations** and patient demographics, we aim to identify the molecular signatures that distinguish Low-Grade Gliomas (LGG) from Glioblastomas (GBM).
+However, performing exhaustive molecular testing is very expensive. The challenge here is to use data from **20 frequently mutated genes** to correctly predict the tumor grade using publicly available datasets.
+
+**The Goal:** To develop a predictive model that determines whether a patient has LGG or GBM based on their clinical and mutational profile. By identifying the optimal subset of genes and clinical features, we seek to improve diagnostic performance and significantly reduce the costs associated with comprehensive molecular testing. 🧪🔬
 
 ---
 
 ## 🧬 Data Structure & Features
 
-The dataset integrates clinical metadata with binary mutational status for key oncogenes.
+The project utilizes a clinical and genomic dataset with the following key components:
 
-* **Clinical Profile:** Includes `Age_at_diagnosis`, `Gender`, and `Race`.
-* **Genomic Profile:** Binary indicators (0: Wildtype, 1: Mutated) for 20 genes such as `IDH1`, `TP53`, `PTEN`, and `EGFR`.
-* **Target Variable:** `Grade` (0 for LGG, 1 for GBM).
+* **Clinical Profile:** Key demographic indicators such as `Age_at_diagnosis`, `Gender`, and `Race`.
+* **Genomic Profile:** Mutational status (0: Wildtype, 1: Mutated) for 20 genes (e.g., `IDH1`, `TP53`, `ATRX`, `PTEN`, `EGFR`). 🧬
+* **Target:** `Grade` classification (0 for LGG, 1 for GBM). 🎯
 
 ---
 
 ## 📈 Exploratory Data Analysis (EDA)
 
-The analysis is divided into two main stages to uncover patterns within the population.
+The analysis performed focuses on identifying the key drivers of tumor aggressiveness.
 
 ### 1. Univariate Analysis
-* **Demographics:** Examination of age distribution and gender balance within the study.
-* **Mutation Frequency:** A ranking of the most prevalent genetic alterations across all patients.
+* **Class Distribution:** Evaluation of the balance between LGG and GBM cases. ⚖️
+* **Age Distribution:** Statistical analysis of the patient population's age at diagnosis. 📅
+* **Demographic Profile:** Breakdown of gender and race frequencies. 🌍
+* **Mutational Frequency:** A ranking of the 20 genes based on how often they appear mutated in the population. 🧬
 
 ### 2. Bivariate Analysis
-* **Age vs. Grade:** Validation of the clinical hypothesis that higher-grade tumors (GBM) correlate with advanced age.
-* **Mutational Signatures:** Identifying "diagnostic markers" by comparing mutation rates between LGG and GBM.
+* **Age vs. Grade:** Visualizing how the patient's age correlates with tumor aggressiveness using boxplots. 📈
+* **Mutations vs. Grade:** Comparative analysis of mutation rates per gene for each grade to identify specific diagnostic markers. 🔍
 
 ---
 
 ## 🛠️ Technologies Used
 
-* **Language:** Python 3.12+
-* **Data Science:** Pandas, NumPy.
-* **Visualization:** Matplotlib, Seaborn.
-* **Environment:** VS Code, Jupyter Notebook.
+* **Language:** Python 3.12+ 
+* **Data Science:** Pandas, NumPy. 
+* **Visualization:** Matplotlib, Seaborn. 
+* **Environment:** Antigravity, Jupyter Notebook. 
 
 ---
 *Project developed as part of the Master's Degree in AI & Big Data by Alejandro Benítez.*
