@@ -55,4 +55,4 @@ This project utilizes the **Glioma Grading Clinical and Mutation Features** data
 🔗 [Access the dataset here](https://archive.ics.uci.edu/dataset/759/glioma+grading+clinical+and+mutation+features+dataset)
 
 ---
-*Project developed by Alejandro Benítez.*
+*Developed by [Alejandro Benitez](https://github.com/alejandrobtez)*
