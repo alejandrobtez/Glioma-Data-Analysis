@@ -1,6 +1,6 @@
 # Glioma Genomic Analysis — Mutation-Based Grade Prediction
 
-> **🚀 QUICK VIEW:** You can explore the core Exploratory Data Analysis (EDA) and the statistical logic here: [**📊 analysis_notebook.ipynb**](./analysis_notebook.ipynb)
+> **🚀 QUICK VIEW:** You can explore the core Exploratory Data Analysis (EDA) and the statistical logic here: [**📊 analysis_notebook.ipynb**](./gliomas.ipynb)
 
 ---
 
